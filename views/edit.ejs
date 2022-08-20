@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    
+    <div class="navbar">
+        <ul>
+            <li><a href="http://localhost:8080/">Home</a></li>
+            <li><a href="/show">Show</a></li>
+            
+          </ul>
+       </div>
+        
+    <form method="post" action="/edit/<%- flightdata._id %>">
+        <div class="form">
+            <div class="title">Update</div>
+    
+            <div class="input-container ic1">
+              <input name="flightnum" class="input" type="number" value="<%- flightdata.flightnum %>" />
+              <div class="cut"></div>
+              <label for="flightnum" class="placeholder">Flight Number</label>
+            </div>
+           
+            <div class="input-container ic2">
+              <input name="flightdur" class="input" type="number" value="<%- flightdata.flightdur %>" / />
+              <div class="cut cut-short"></div>
+              <label for="flightdur" class="placeholder">Flight Duration</>
+            </div>
+
+            <div class="input-container ic2">
+              <input name="flightdes" class="input" type="text" value="<%- flightdata.flightdes %>" / />
+              <div class="cut cut-short"></div>
+              <label for="flightdes" class="placeholder">Flight Destination</>
+            </div>
+
+            <div class="input-container ic2">
+              <input name="flightsou" class="input" type="text" value="<%- flightdata.flightsou %>" / />
+              <div class="cut cut-short"></div>
+              <label for="flightsou" class="placeholder">Flight Source</>
+            </div>
+
+            <div class="input-container ic2">
+              <input name="flightdate" class="input" type="date" value="<%- flightdata.flightdate %>" / />
+              <div class="cut cut-short"></div>
+              <label for="flightdate" class="placeholder">Flight Date</>
+            </div>
+
+            <div class="input-container ic2">
+              <input name="flighttime" class="input" type="text" value="<%- flightdata.flighttime %>" / />
+              <div class="cut cut-short"></div>
+              <label for="flighttime" class="placeholder">flight Time</>
+            </div>
+    
+            <button type="submit" class="submit">Update</button>
+        </div>
+    </form>   
+
+
+</body>
+</html>
